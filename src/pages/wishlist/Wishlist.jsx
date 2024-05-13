@@ -8,7 +8,7 @@ const Wishlist = () => {
 
 
   return (
-    <div>
+    <div className='container'>
 
       {
         wishlist.length 

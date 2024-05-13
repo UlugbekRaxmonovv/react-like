@@ -4,10 +4,14 @@ import { FaRegHeart, FaHeart  } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { useDispatch,useSelector} from 'react-redux';
 import { toggleEvent } from '../../pages/wishlist/wishlistSlice';
+import { addToCart} from '../../pages/cart/cartSlice'
+import { FaShoppingCart } from "react-icons/fa";
 
 
 const Products = ({products,title}) => {
   let wishlist = useSelector(state => state.wishlist.value)
+  let javob = useSelector(state => state.cart.value)
+
 
   const dispatch = useDispatch();
   let link = products?.map(product =>(
@@ -23,8 +27,12 @@ const Products = ({products,title}) => {
         <FaRegHeart/>
         }
       </button>
-      <button>
-        <IoCartOutline/>
+      <button onClick={() => dispatch(addToCart(product))}>
+{   
+      javob?.some(javob => javob.id == product.id)
+    ?<FaShoppingCart />
+    :<IoCartOutline/>
+}
       </button>
     </div>
   ))

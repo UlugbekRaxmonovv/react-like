@@ -5,6 +5,12 @@
     align-items: center;
     background:#ddd;
 }
+.navbar_all{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background:#ddd;
+}
 .navbar__logo{
     flex: 1;
     font-size: 28px;
