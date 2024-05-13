@@ -66,7 +66,7 @@ const CartMain = ({products}) => {
                   <div className="imgs">  
                   <button onClick={() =>dispatch(removeItemFromCart(inx))}><MdOutlineDelete/></button>
               </div>
-              <p>Jami:{carts} </p>
+           
               <div className="imgss">
                   <button onClick={() =>dispatch(removeAllItemsFromCart(inx))}>deletAll</button>
               </div>
@@ -118,7 +118,7 @@ const CartMain = ({products}) => {
                 <div className="pri_row">
                     <h2>Shiping</h2>
                 </div>
-                {/* <h5>${jami}</h5> */}
+                <p>Jami:{carts} </p>
              </div>
             <div className="btn_button">
             <button>Proceed To Checkout</button>
